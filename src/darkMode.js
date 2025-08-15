@@ -150,6 +150,7 @@ class DarkModeToggle {
                 --text-secondary: #cccccc;
                 --border-color: #404040;
                 --shadow: rgba(0, 0, 0, 0.3);
+                --light_green: rgba(5, 173, 44, 0.8);
             }
             
             /* Comprehensive dark mode overrides */
@@ -498,6 +499,28 @@ class DarkModeToggle {
             .dark-mode #blog-form textarea, .dark #blog-form textarea {
                 background-color: var(--bg-primary) !important;
                 border-color: var(--border-color) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Contact page specific overrides */
+            .dark-mode .form-label, .dark .form-label {
+                color: var(--text-primary) !important;
+            }
+            
+            .dark-mode .get-touch, .dark .get-touch {
+                background-color: var(--light_green) !important;
+            }
+            
+            .dark-mode .form-section, .dark .form-section {
+                background-color: var(--light_green) !important;
+            }
+            
+            .dark-mode .info-box, .dark .info-box {
+                background: var(--bg-secondary) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .dark-mode .footer-links a, .dark .footer-links a {
                 color: var(--text-primary) !important;
             }
             

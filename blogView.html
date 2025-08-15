@@ -24,24 +24,24 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fc;
-      color: #333;
+      background-color: var(--bg-primary, #f8f9fc);
+      color: var(--text-primary, #333);
     }
 
     .blog-section {
-      background-color: #ffffff;
+      background-color: var(--bg-secondary, #ffffff);
       margin: 40px auto;
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 8px 20px var(--shadow, rgba(0, 0, 0, 0.05));
     }
 
     .back-btn {
       display: inline-block;
       padding: 10px 20px;
       font-weight: 500;
-      background-color: #e3eaf5;
-      color: #273055;
+      background-color: var(--bg-primary, #e3eaf5);
+      color: var(--text-primary, #273055);
       border-radius: 8px;
       text-decoration: none;
       margin-bottom: 25px;
@@ -49,13 +49,13 @@
     }
 
     .back-btn:hover {
-      background-color: #d2def0;
-      color: #1e2c49;
+      background-color: var(--bg-secondary, #d2def0);
+      color: var(--text-primary, #1e2c49);
     }
 
     #full-blog-content h1,
     #full-blog-content h2 {
-      color: #2c3e50;
+      color: var(--text-primary, #2c3e50);
       margin-bottom: 1rem;
     }
 
@@ -63,6 +63,18 @@
       line-height: 1.8;
       font-size: 1.05rem;
       margin-bottom: 1.2rem;
+      color: var(--text-primary, inherit);
+    }
+
+    /* Dark mode specific overrides */
+    .dark-mode .back-btn, .dark .back-btn {
+      background-color: var(--bg-secondary) !important;
+      color: var(--text-primary) !important;
+    }
+
+    .dark-mode .back-btn:hover, .dark .back-btn:hover {
+      background-color: var(--bg-primary) !important;
+      color: var(--text-primary) !important;
     }
 
     @media (max-width: 768px) {
